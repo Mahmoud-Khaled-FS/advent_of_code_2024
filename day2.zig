@@ -55,6 +55,7 @@ fn isSafePart2(levels: []i32) !i32 {
             if (isListIntSafe(try array.toOwnedSlice()) == 1) {
                 return 1;
             }
+            array.clearAndFree();
         }
         return 0;
     }
